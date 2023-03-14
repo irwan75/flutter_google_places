@@ -567,6 +567,7 @@ class PlacesAutocomplete {
     Client? httpClient,
     InputDecoration? decoration,
     String startText = "",
+    int debounce = 1000,
     Duration transitionDuration = const Duration(seconds: 300),
     TextStyle? textStyle,
     ThemeData? themeData,
@@ -595,6 +596,7 @@ class PlacesAutocomplete {
       textStyle: textStyle,
       themeData: themeData,
       resultTextStyle: resultTextStyle,
+      debounce: debounce,
     );
 
     if (mode == Mode.overlay) {
